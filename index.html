@@ -228,14 +228,71 @@
     <section id="Nieuws">
         <div class="blokken3">
     <div class="blokken2">
+        <article class="frikandel-article">
         <center>
         <h2>Nieuws</h2>
     <h3>Bekijk hier het laatste nieuws over onze acties!</h3>
-    <img src="https://pbs.twimg.com/media/GLH_OpOXwAILFfl?format=jpg&name=large">
+    <img src="https://pbs.twimg.com/media/GLH_OpOXwAILFfl?format=jpg&name=large" width="100%">
     <p>Artikel uit De Krant</p>
     </center>
+</article>
+<br>
+    <article class="frikandel-article">
+        
+        <h2>Loopclinic terugblik</h2>
+
+            <h1>   Zaterdag 13 april vond de loopclinic met als thema ‘heuvel- en viaducttraining’ plaats. 
+            Maar liefst 20 enthousiaste hardlopers en trainers namen deel aan de clinic onder leiding van sportfysiotherapeut en goede doelentrainer Joeval Benjamins.</h1>
+            
+           <h1> De groep kreeg eerst een korte theoretische uitleg over looptechniek aangevuld met praktische tips.</h1>
+            
+           <h1>  Daarna volgde een uitdagende en leuke training bij het viaduct van Tolbert met oa heuvelsprints, lopen op cadans en ‘zuinig lopen met een trotse houding’. Er waren zelfs deelnemers die de extra uitdaging aangingen om met iemand op de rug het viaduct op te rennen. Ook werd iedereen individueel voorzien van tips. </h1>
+            
+            <h1>  De ochtend werd afgesloten met een verkoelend ijsje en gezellige napraat. Alle deelnemers: bedankt voor jullie komst, enthousiasme en donaties! Dankzij jullie kon er een fantastisch bedrag van €307,50 gedoneerd worden aan #teamAlex+ </h1>
+            
+            <h1>  Speciale dank aan Joeval Benjamins voor de inspirerende training.
+            Daarnaast dank aan Emo de Vries en Gossé Dijkema voor het beschikbaar stellen van de ruimte van de Jonge Wereld.</h1>
+        
+<br>
+      
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://pbs.twimg.com/media/GLhE8pkWMAEQJ-g?format=jpg&name=large" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://pbs.twimg.com/media/GLhE8HJWEAA4kMs?format=jpg&name=large" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://pbs.twimg.com/media/GLhE7aYXwAAOwrd?format=jpg&name=large" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <br><br><br>
+            <center>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/aj9O8n5pIv0?si=8CM29TZWQKcXLNS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+        </article>
     </div>
 </div>
+
+
+
    </section>
    
        
@@ -377,6 +434,33 @@
                 behavior: 'smooth'
             });
         }
+
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 </script>
 
 </body>
