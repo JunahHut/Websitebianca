@@ -293,7 +293,55 @@
     </div>
 </div>
 
+<article class="frikandel-article">
+        
+    <h2>Frikandellen tourtocht terugblik</h2>
 
+        <p>   Zaterdag 11 mei vond de Frikandellen Tourtocht plaats.
+            Maar liefst 37 enthousiaste e-bikers, fietsers en racefietsers namen deel aan de tourtocht.
+            Er waren door Heleen 3 prachtige routes uitgezet rondom het Leekstermeer- en Onlandengebied van respectievelijk 30, 50 en 80 km.</p>
+        <p hidden>Test</p>
+       <p> De fietsomstandigheden waren fantastisch. De zon scheen volop en er was weinig wind. Op de route-kaartjes stonden diverse terrasjes vermeld waar een pauze genomen kon worden. </p>
+        <p hidden>Test</p>
+       <p>  De middag werd afgesloten met een verkoelend ijsje en natuurlijk de welverdiende frikandel die zelf speciaal gemaakt moest worden. </p>
+        <p hidden>Test</p>
+        <p>  Alle deelnemers: bedankt voor jullie komst, enthousiasme en donaties! Dankzij jullie kon er een fantastisch bedrag van €700,-gedoneerd worden aan #teamAlex+ </p>
+        <p hidden>Test</p>
+        <p>  Speciale dank aan: VEV en Sportcentrum Leek voor het beschikbaar stellen van de ruimte. Erik Wijma (inkoop) en Jos Velema (frikandellen bereiden)</p>
+    
+<br>
+  
+    <div class="slideshow-container2">
+
+        <div class="mySlides2 fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajslAWEAAtrdh?format=jpg&name=small" style="width:100%">
+        </div>
+        
+        <div class="mySlides2 fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajs3jXgAAx7y-?format=jpg&name=360x360" style="width:100%">
+        </div>
+        
+        <div class="mySlides2 fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajtLxWsAAS_VO?format=jpg&name=360x360" style="width:100%">
+        </div>
+        
+        <a class="prev2" onclick="plusSlides2(-1)">❮</a>
+        <a class="next2" onclick="plusSlides2(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot2" onclick="currentSlide2(4)"></span> 
+          <span class="dot2" onclick="currentSlide2(5)"></span> 
+          <span class="dot2" onclick="currentSlide2(6)"></span> 
+</div>
+    </article>
+</div>
+</div>
 
    </section>
    
@@ -463,6 +511,33 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+let slideIndex2 = 1;
+
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides2");
+  let dots = document.getElementsByClassName("dot2");
+  if (n > slides.length) {slideIndex2 = 1}    
+  if (n < 1) {slideIndex2 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex2-1].style.display = "block";  
+  dots[slideIndex2-1].className += " active";
+}
+
 </script>
 
 </body>
