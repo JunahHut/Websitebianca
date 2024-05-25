@@ -314,18 +314,18 @@
     <div class="slideshow-container2">
 
         <div class="mySlides2 fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="https://pbs.twimg.com/media/GOajslAWEAAtrdh?format=jpg&name=small" style="width:80%">
+          <div class="numbertext2">1 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajslAWEAAtrdh?format=jpg&name=small" style="width:100%">
         </div>
         
         <div class="mySlides2 fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="https://pbs.twimg.com/media/GOajs3jXgAAx7y-?format=jpg&name=360x360" style="width:80%">
+          <div class="numbertext2">2 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajs3jXgAAx7y-?format=jpg&name=360x360" style="width:100%">
         </div>
         
         <div class="mySlides2 fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="https://pbs.twimg.com/media/GOajtLxWsAAS_VO?format=jpg&name=360x360" style="width:80%">
+          <div class="numbertext2">3 / 3</div>
+          <img src="https://pbs.twimg.com/media/GOajtLxWsAAS_VO?format=jpg&name=360x360" style="width:100%">
         </div>
         
         <a class="prev2" onclick="plusSlides2(-1)">❮</a>
@@ -335,9 +335,9 @@
         <br>
         
         <div style="text-align:center">
-          <span class="dot2" onclick="currentSlide2(4)"></span> 
-          <span class="dot2" onclick="currentSlide2(5)"></span> 
-          <span class="dot2" onclick="currentSlide2(6)"></span> 
+          <span class="dot2" onclick="currentSlide2(1)"></span> 
+          <span class="dot2" onclick="currentSlide2(2)"></span> 
+          <span class="dot2" onclick="currentSlide2(3)"></span> 
 </div>
     </article>
 </div>
@@ -514,29 +514,33 @@ function showSlides(n) {
 
 let slideIndex2 = 1;
 
-function plusSlides2(n) {
-  showSlides2(slideIndex2 += n);
+// Ensure that the first slide is displayed when the page loads
+showSlides2(slideIndex2);
+
+function plusSlides2(m) {
+  showSlides2(slideIndex2 += m);
 }
 
-function currentSlide2(n) {
-  showSlides2(slideIndex2 = n);
+function currentSlide2(m) {
+  showSlides2(slideIndex2 = m);
 }
 
-function showSlides2(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides2");
-  let dots = document.getElementsByClassName("dot2");
-  if (n > slides.length) {slideIndex2 = 1}    
-  if (n < 1) {slideIndex2 = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+function showSlides2(m) {
+  let j;
+  let slides2 = document.getElementsByClassName("mySlides2");
+  let dots2 = document.getElementsByClassName("dot2");
+  if (m > slides2.length) {slideIndex2 = 1}    
+  if (m < 1) {slideIndex2 = slides2.length}
+  for (j = 0; j < slides2.length; j++) {
+    slides2[j].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (j = 0; j < dots2.length; j++) {
+    dots2[j].className = dots2[j].className.replace(" active2", "");
   }
-  slides[slideIndex2-1].style.display = "block";  
-  dots[slideIndex2-1].className += " active";
+  slides2[slideIndex2-1].style.display = "block";  
+  dots2[slideIndex2-1].className += " active2";
 }
+
 
 </script>
 
